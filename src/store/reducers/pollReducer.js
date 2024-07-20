@@ -20,6 +20,14 @@ const pollReducer = (state = initialState, action) => {
 				...state,
 				currentStep: action.payload.index,
 			}
+		case "ANS_INDEX":
+			return {
+				...state,
+				index: Object.values({
+					...state.index,
+					[action.payload.index]: action.payload.index,
+				}),
+			}
 		case "SET_ANSWER":
 			return {
 				...state,

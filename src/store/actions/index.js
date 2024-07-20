@@ -11,6 +11,11 @@ export const setCurrentStepIndex = (index) => ({
 	payload: { index },
 })
 
+export const setAnswerIndex = (index) => ({
+	type: "ANS_INDEX",
+	payload: { index },
+})
+
 export const setAnswer = (question, answer) => ({
 	type: "SET_ANSWER",
 	payload: { question, answer },

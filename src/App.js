@@ -1,64 +1,59 @@
-import { ThemeProvider } from "@material-ui/core/styles"
 import { SpeakerNotesSharp, SpeakerNotesTwoTone, SpeakerPhoneRounded } from "@material-ui/icons" // Replace with actual icons
 import React from "react"
 import { Provider } from "react-redux"
 import "./App.css"
 import Carousels from "./components/Carousels"
-import Step from "./components/Step"
 import store from "./store"
-import theme from "./theme"
 
 function App() {
 	const steps = [
-		<Step
-			title="How was your week overall?"
-			options={[
+		{
+			title: "How was your week overall?",
+			options: [
 				{ icon: <SpeakerPhoneRounded />, label: "Very Satisfied" },
 				{ icon: <SpeakerNotesSharp />, label: "Satisfied" },
 				{ icon: <SpeakerNotesTwoTone />, label: "Dissatisfied" },
-			]}
-		/>,
-		<Step
-			title="How do you feel about the workload this week?"
-			options={[
-				{ icon: <SpeakerNotesTwoTone />, label: "Definitely" },
-				{ icon: <SpeakerNotesTwoTone />, label: "Maybe" },
-				{ icon: <SpeakerNotesTwoTone />, label: "No" },
-			]}
-		/>,
-		<Step
-			title="How do you feel about your productivity this week?"
-			options={[
-				{ icon: <SpeakerNotesTwoTone />, label: "Definitely" },
-				{ icon: <SpeakerNotesTwoTone />, label: "Maybe" },
-				{ icon: <SpeakerNotesTwoTone />, label: "No" },
-			]}
-		/>,
-		<Step
-			title="Are you feeling positive about the direction of our project?"
-			options={[
-				{ icon: <SpeakerNotesTwoTone />, label: "Definitely" },
-				{ icon: <SpeakerNotesTwoTone />, label: "Maybe" },
-				{ icon: <SpeakerNotesTwoTone />, label: "No" },
-			]}
-		/>,
-		<Step
-			title="4 Would you recommend our service to others?"
-			options={[
-				{ icon: <SpeakerNotesTwoTone />, label: "Definitely" },
-				{ icon: <SpeakerNotesTwoTone />, label: "Maybe" },
-				{ icon: <SpeakerNotesTwoTone />, label: "No" },
-			]}
-		/>,
+			],
+		},
+		{
+			title: "1How was your week overall dsyysyyy?",
+			options: [
+				{ icon: <SpeakerPhoneRounded />, label: "Very Satisfied" },
+				{ icon: <SpeakerNotesSharp />, label: "Satisfied" },
+				{ icon: <SpeakerNotesTwoTone />, label: "Dissatisfied" },
+			],
+		},
+		{
+			title: "2How was your week overall dsyysyyy?",
+			options: [
+				{ icon: <SpeakerPhoneRounded />, label: "Very Satisfied" },
+				{ icon: <SpeakerNotesSharp />, label: "Satisfied" },
+				{ icon: <SpeakerNotesTwoTone />, label: "Dissatisfied" },
+			],
+		},
+		{
+			title: "3How was your week overall dsyysyyy?",
+			options: [
+				{ icon: <SpeakerPhoneRounded />, label: "Very Satisfied" },
+				{ icon: <SpeakerNotesSharp />, label: "Satisfied" },
+				{ icon: <SpeakerNotesTwoTone />, label: "Dissatisfied" },
+			],
+		},
+		{
+			title: "5How was your week overall dsyysyyy?",
+			options: [
+				{ icon: <SpeakerPhoneRounded />, label: "Very Satisfied" },
+				{ icon: <SpeakerNotesSharp />, label: "Satisfied" },
+				{ icon: <SpeakerNotesTwoTone />, label: "Dissatisfied" },
+			],
+		},
 	]
 
 	return (
 		<Provider store={store}>
-			<ThemeProvider theme={theme}>
-				<div className="App">
-					<Carousels steps={steps} />
-				</div>
-			</ThemeProvider>
+			<div className="App">
+				<Carousels steps={steps} />
+			</div>
 		</Provider>
 	)
 }

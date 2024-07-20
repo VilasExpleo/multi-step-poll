@@ -7,8 +7,10 @@ import Questions from "./Questions"
 import Summary from "./Summary"
 const Carousels = ({ steps }) => {
 	const dispatch = useDispatch()
+
 	const currentStep = useSelector((state) => state.poll.currentStep)
 	const answers = useSelector((state) => state.poll.answers)
+	const index = useSelector((state) => state.poll.index)
 	const handelTitle = (e) => {
 		dispatch(setCurrentStepIndex(e.target.value))
 	}
@@ -41,10 +43,17 @@ const Carousels = ({ steps }) => {
 								</div>
 							))}
 						</div>
-						<Questions questions={steps[currentStep]?.props?.title} />
+						<Questions questions={steps[currentStep]?.title} />
+						{console.log(steps)}
+						{console.log(answers)}
+						{console.log(currentStep, index)}
 					</div>
 					<div className="column column2">
-						<Answers answers={steps[currentStep]} stepslength={steps.length} />
+						<Answers
+							answers={steps[currentStep]}
+							stepslength={steps.length}
+							totalAns={Object.keys(answers).length}
+						/>
 					</div>
 				</div>
 			)}
