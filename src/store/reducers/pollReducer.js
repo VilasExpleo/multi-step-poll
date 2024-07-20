@@ -1,0 +1,36 @@
+const initialState = {
+	currentStep: 0,
+	answers: {},
+}
+
+const pollReducer = (state = initialState, action) => {
+	switch (action.type) {
+		case "NEXT_STEP":
+			return {
+				...state,
+				currentStep: state.currentStep + 1,
+			}
+		case "PREV_STEP":
+			return {
+				...state,
+				currentStep: state.currentStep - 1,
+			}
+		case "CURRENT_STEP":
+			return {
+				...state,
+				currentStep: action.payload.index,
+			}
+		case "SET_ANSWER":
+			return {
+				...state,
+				answers: {
+					...state.answers,
+					[action.payload.question]: action.payload.answer,
+				},
+			}
+		default:
+			return state
+	}
+}
+
+export default pollReducer

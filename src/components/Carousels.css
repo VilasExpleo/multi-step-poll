@@ -1,0 +1,30 @@
+/* Ensure the container takes up the full viewport height */
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh; /* Full viewport height */
+}
+
+.row {
+	display: flex;
+	flex: 1; /* Each row takes up half of the container's height */
+}
+
+.column {
+	flex: 1; /* Each column takes up half of the row's width */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.column1 {
+	background-color: #3d96ef; /* Optional: background color for the top row columns */
+}
+
+.column2 {
+	background-color: #fff; /* Optional: background color for the bottom row columns */
+}
+.displayRadio {
+	display: flex;
+	flex-direction: column;
+}

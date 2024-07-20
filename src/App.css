@@ -1,0 +1,25 @@
+.carousel {
+	display: flex;
+	align-items: center;
+}
+
+.carousel-button {
+	flex: 0 0 auto;
+	cursor: pointer;
+}
+
+.carousel-content-wrapper {
+	overflow: hidden;
+	flex: 1;
+}
+
+.carousel-content {
+	display: flex;
+	transition: transform 0.3s ease-in-out;
+	width: 100%; /* Ensure the carousel content takes full width */
+}
+
+.carousel-item {
+	min-width: 100%;
+	flex: 0 0 auto;
+}
