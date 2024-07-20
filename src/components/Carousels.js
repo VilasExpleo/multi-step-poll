@@ -6,12 +6,13 @@ import "./Carousels.css"
 import Questions from "./Questions"
 import Summary from "./Summary"
 const Carousels = ({ steps }) => {
-	const currentStep = useSelector((state) => state.poll.currentStep)
 	const dispatch = useDispatch()
+	const currentStep = useSelector((state) => state.poll.currentStep)
 	const answers = useSelector((state) => state.poll.answers)
 	const handelTitle = (e) => {
 		dispatch(setCurrentStepIndex(e.target.value))
 	}
+
 	return (
 		<div className="container">
 			{answers && steps && Object.keys(answers).length === steps.length ? (
@@ -21,7 +22,7 @@ const Carousels = ({ steps }) => {
 			) : (
 				<div className="row">
 					<div className="column column1">
-						<div>
+						<div style={{ padding: "20px" }}>
 							{steps.map((step, index) => (
 								<div key={index} className="displayRadio">
 									<input
@@ -30,6 +31,12 @@ const Carousels = ({ steps }) => {
 										name="carousel-step"
 										value={index}
 										onChange={handelTitle}
+										style={{
+											width: "20px",
+											height: "20px",
+											marginRight: "5px",
+										}}
+										checked={index == currentStep}
 									/>
 								</div>
 							))}

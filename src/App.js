@@ -11,7 +11,7 @@ import theme from "./theme"
 function App() {
 	const steps = [
 		<Step
-			title="How satisfied are you with our service?"
+			title="How was your week overall?"
 			options={[
 				{ icon: <SpeakerPhoneRounded />, label: "Very Satisfied" },
 				{ icon: <SpeakerNotesSharp />, label: "Satisfied" },
@@ -19,7 +19,7 @@ function App() {
 			]}
 		/>,
 		<Step
-			title="1 Would you recommend our service to others?"
+			title="How do you feel about the workload this week?"
 			options={[
 				{ icon: <SpeakerNotesTwoTone />, label: "Definitely" },
 				{ icon: <SpeakerNotesTwoTone />, label: "Maybe" },
@@ -27,7 +27,7 @@ function App() {
 			]}
 		/>,
 		<Step
-			title="2 Would you recommend our service to others?"
+			title="How do you feel about your productivity this week?"
 			options={[
 				{ icon: <SpeakerNotesTwoTone />, label: "Definitely" },
 				{ icon: <SpeakerNotesTwoTone />, label: "Maybe" },
@@ -35,7 +35,7 @@ function App() {
 			]}
 		/>,
 		<Step
-			title="3 Would you recommend our service to others?"
+			title="Are you feeling positive about the direction of our project?"
 			options={[
 				{ icon: <SpeakerNotesTwoTone />, label: "Definitely" },
 				{ icon: <SpeakerNotesTwoTone />, label: "Maybe" },
@@ -57,7 +57,6 @@ function App() {
 			<ThemeProvider theme={theme}>
 				<div className="App">
 					<Carousels steps={steps} />
-					{/* <Carousel steps={steps} /> */}
 				</div>
 			</ThemeProvider>
 		</Provider>

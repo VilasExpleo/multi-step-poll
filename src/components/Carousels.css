@@ -19,6 +19,7 @@
 
 .column1 {
 	background-color: #3d96ef; /* Optional: background color for the top row columns */
+	justify-content: flex-start;
 }
 
 .column2 {
