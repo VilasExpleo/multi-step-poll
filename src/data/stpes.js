@@ -1,13 +1,12 @@
-// src/steps.js
 import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAlt"
 import ThumbDownIcon from "@material-ui/icons/ThumbDown"
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt"
 
-const Steps = [
+const steps = [
 	{
 		title: "How was your week overall?",
 		options: [
-			{ icon: <ThumbUpAltIcon style={{ color: "#d4d40b" }} />, label: "Very Satisfied" },
+			{ icon: <ThumbUpAltIcon style={{ color: "d4d40b" }} />, label: "Very Satisfied" },
 			{ icon: <SentimentSatisfiedAltIcon />, label: "Satisfied" },
 			{ icon: <ThumbDownIcon />, label: "Dissatisfied" },
 		],
@@ -46,4 +45,4 @@ const Steps = [
 	},
 ]
 
-export default Steps
+export default steps
