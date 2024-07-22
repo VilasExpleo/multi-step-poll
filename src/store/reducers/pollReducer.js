@@ -36,6 +36,15 @@ const pollReducer = (state = initialState, action) => {
 					[action.payload.question]: action.payload.answer,
 				},
 			}
+		case "RESET_ANSWERS":
+			const blankAnswers = Object.keys(state.answers).reduce((acc, key) => {
+				acc[key] = ""
+				return acc
+			}, {})
+			return {
+				...state,
+				answers: blankAnswers,
+			}
 		default:
 			return state
 	}

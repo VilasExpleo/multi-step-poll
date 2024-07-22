@@ -1,20 +1,59 @@
 .summary {
+	background: linear-gradient(135deg, #a2c2e8, #f1f4f8);
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 120px;
 	width: 100%;
-	display: flex;
-	background-color: aqua;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh; /* Full height of the viewport */
-	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .summary h2 {
-	margin-bottom: 20px;
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 15px;
 }
 
 .summary ul {
 	list-style-type: none;
 	padding: 0;
-	margin: 0 0 20px 0;
+	margin: 0;
+}
+
+.summary li {
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+	font-size: 16px;
+	color: #555;
+}
+
+.summary li:last-child {
+	border-bottom: none;
+}
+
+.summary strong {
+	color: #000;
+}
+
+.summary Button {
+	margin-top: 20px;
+}
+.summary Button {
+	background-color: #007bff; /* Primary color */
+	color: #fff; /* Text color */
+	border: none; /* Removes default border */
+	border-radius: 4px; /* Rounded corners */
+	padding: 10px 20px; /* Spacing inside the button */
+	font-size: 16px; /* Text size */
+	cursor: pointer; /* Pointer cursor on hover */
+	transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.summary Button:hover {
+	background-color: #0056b3; /* Darker shade on hover */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.summary Button:focus {
+	outline: none; /* Removes default focus outline */
+	box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Custom focus ring */
 }

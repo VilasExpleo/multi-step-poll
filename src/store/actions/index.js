@@ -20,3 +20,9 @@ export const setAnswer = (question, answer) => ({
 	type: "SET_ANSWER",
 	payload: { question, answer },
 })
+
+export const resetAnswers = () => {
+	return {
+		type: "RESET_ANSWERS",
+	}
+}

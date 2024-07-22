@@ -2,15 +2,19 @@ import { Button } from "@material-ui/core"
 import axios from "axios"
 import React from "react"
 import { useSelector } from "react-redux"
+// import { resetAnswers } from "../store/actions"
 import "./Summary.css"
 
-const Summary = () => {
+const Summary = ({ reloadParent }) => {
+	//const dispatch = useDispatch()
 	const answers = useSelector((state) => state.poll.answers)
 
 	const handleSubmit = async () => {
 		try {
 			await axios.post("https://jsonplaceholder.typicode.com/posts", answers)
 			alert("Data submitted successfully!")
+			//dispatch(resetAnswers())
+			reloadParent()
 		} catch (error) {
 			console.error("Error submitting data:", error)
 		}

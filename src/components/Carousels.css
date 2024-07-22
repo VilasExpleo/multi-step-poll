@@ -16,9 +16,12 @@
 	align-items: center;
 	justify-content: center;
 }
-
+.column b {
+	font-size: 30px;
+	color: #fff;
+}
 .column1 {
-	background-color: #3d96ef; /* Optional: background color for the top row columns */
+	background-color: #561fefcf; /* Optional: background color for the top row columns */
 	justify-content: flex-start;
 }
 

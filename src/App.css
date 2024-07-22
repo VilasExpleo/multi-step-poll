@@ -23,3 +23,7 @@
 	min-width: 100%;
 	flex: 0 0 auto;
 }
+.MuiSvgIcon-root {
+	color: rgb(212, 212, 11);
+	font-size: 60px !important;
+}

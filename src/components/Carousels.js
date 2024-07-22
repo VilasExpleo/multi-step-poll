@@ -1,25 +1,34 @@
-import React from "react"
+import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { setCurrentStepIndex } from "../store/actions"
+import { resetAnswers, setCurrentStepIndex } from "../store/actions"
 import Answers from "./Answers"
 import "./Carousels.css"
 import Questions from "./Questions"
 import Summary from "./Summary"
+
 const Carousels = ({ steps }) => {
 	const dispatch = useDispatch()
-
+	const [reloadKey, setReloadKey] = useState(0)
 	const currentStep = useSelector((state) => state.poll.currentStep)
-	const answers = useSelector((state) => state.poll.answers)
-	const index = useSelector((state) => state.poll.index)
+	let answers = useSelector((state) => state.poll.answers)
+
 	const handelTitle = (e) => {
 		dispatch(setCurrentStepIndex(e.target.value))
 	}
+	const reloadComponent = () => {
+		alert("zxc")
+		setReloadKey((prevKey) => prevKey + 1)
+		dispatch(resetAnswers())
+		answers = {}
+		console.log(answers)
+		console.log(Object.keys(answers).length, steps.length)
+	}
 
 	return (
-		<div className="container">
+		<div className="container" key={reloadKey}>
 			{answers && steps && Object.keys(answers).length === steps.length ? (
 				<div className="row">
-					<Summary />
+					<Summary reloadParent={reloadComponent} />
 				</div>
 			) : (
 				<div className="row">
@@ -44,9 +53,6 @@ const Carousels = ({ steps }) => {
 							))}
 						</div>
 						<Questions questions={steps[currentStep]?.title} />
-						{console.log(steps)}
-						{console.log(answers)}
-						{console.log(currentStep, index)}
 					</div>
 					<div className="column column2">
 						<Answers

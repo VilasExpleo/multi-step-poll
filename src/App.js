@@ -1,4 +1,6 @@
-import { SpeakerNotesSharp, SpeakerNotesTwoTone, SpeakerPhoneRounded } from "@material-ui/icons" // Replace with actual icons
+import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAlt"
+import ThumbDownIcon from "@material-ui/icons/ThumbDown"
+import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt"
 import React from "react"
 import { Provider } from "react-redux"
 import "./App.css"
@@ -10,41 +12,41 @@ function App() {
 		{
 			title: "How was your week overall?",
 			options: [
-				{ icon: <SpeakerPhoneRounded />, label: "Very Satisfied" },
-				{ icon: <SpeakerNotesSharp />, label: "Satisfied" },
-				{ icon: <SpeakerNotesTwoTone />, label: "Dissatisfied" },
+				{ icon: <ThumbUpAltIcon style={{ color: "d4d40b" }} />, label: "Very Satisfied" },
+				{ icon: <SentimentSatisfiedAltIcon />, label: "Satisfied" },
+				{ icon: <ThumbDownIcon />, label: "Dissatisfied" },
 			],
 		},
 		{
-			title: "1How was your week overall dsyysyyy?",
+			title: "How do you feel about the workload this week?",
 			options: [
-				{ icon: <SpeakerPhoneRounded />, label: "Very Satisfied" },
-				{ icon: <SpeakerNotesSharp />, label: "Satisfied" },
-				{ icon: <SpeakerNotesTwoTone />, label: "Dissatisfied" },
+				{ icon: <ThumbUpAltIcon />, label: "Very Satisfied" },
+				{ icon: <SentimentSatisfiedAltIcon />, label: "Satisfied" },
+				{ icon: <ThumbDownIcon />, label: "Dissatisfied" },
 			],
 		},
 		{
-			title: "2How was your week overall dsyysyyy?",
+			title: "How do you feel about your productivity this week?",
 			options: [
-				{ icon: <SpeakerPhoneRounded />, label: "Very Satisfied" },
-				{ icon: <SpeakerNotesSharp />, label: "Satisfied" },
-				{ icon: <SpeakerNotesTwoTone />, label: "Dissatisfied" },
+				{ icon: <ThumbUpAltIcon />, label: "Very Satisfied" },
+				{ icon: <SentimentSatisfiedAltIcon />, label: "Satisfied" },
+				{ icon: <ThumbDownIcon />, label: "Dissatisfied" },
 			],
 		},
 		{
-			title: "3How was your week overall dsyysyyy?",
+			title: "Do you feel like workplace distractions are a problem for you this week?",
 			options: [
-				{ icon: <SpeakerPhoneRounded />, label: "Very Satisfied" },
-				{ icon: <SpeakerNotesSharp />, label: "Satisfied" },
-				{ icon: <SpeakerNotesTwoTone />, label: "Dissatisfied" },
+				{ icon: <ThumbUpAltIcon />, label: "Very Satisfied" },
+				{ icon: <SentimentSatisfiedAltIcon />, label: "Satisfied" },
+				{ icon: <ThumbDownIcon />, label: "Dissatisfied" },
 			],
 		},
 		{
-			title: "5How was your week overall dsyysyyy?",
+			title: "Are you feeling positive about the direction of our project?",
 			options: [
-				{ icon: <SpeakerPhoneRounded />, label: "Very Satisfied" },
-				{ icon: <SpeakerNotesSharp />, label: "Satisfied" },
-				{ icon: <SpeakerNotesTwoTone />, label: "Dissatisfied" },
+				{ icon: <ThumbUpAltIcon />, label: "Very Satisfied" },
+				{ icon: <SentimentSatisfiedAltIcon />, label: "Satisfied" },
+				{ icon: <ThumbDownIcon />, label: "Dissatisfied" },
 			],
 		},
 	]

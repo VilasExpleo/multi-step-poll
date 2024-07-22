@@ -8,12 +8,12 @@ const Answers = ({ answers, stepslength, totalAns }) => {
 		console.log(answers.title, option.label)
 		dispatch(setAnswer(answers.title, option.label))
 		dispatch(setAnswerIndex(currentStep))
-		if (stepslength > currentStep && totalAns < stepslength) dispatch(setCurrentStepIndex(Number(currentStep) + 1))
+		if (stepslength - 1 > currentStep && totalAns < stepslength)
+			dispatch(setCurrentStepIndex(Number(currentStep) + 1))
 	}
 
 	return (
 		<div>
-			{stepslength} -- {totalAns} --- {currentStep}
 			{answers?.options?.map((option, index) => (
 				<IconButton key={index} onClick={() => handleOptionClick(option)}>
 					{option.icon}
