@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 // import { resetAnswers } from "../store/actions"
 import "./Summary.css"
 
-const Summary = ({ reloadParent }) => {
+const Summary = ({ onSubmit }) => {
 	//const dispatch = useDispatch()
 	const answers = useSelector((state) => state.poll.answers)
 
@@ -14,7 +14,7 @@ const Summary = ({ reloadParent }) => {
 			await axios.post("https://jsonplaceholder.typicode.com/posts", answers)
 			alert("Data submitted successfully!")
 			//dispatch(resetAnswers())
-			reloadParent()
+			onSubmit()
 		} catch (error) {
 			console.error("Error submitting data:", error)
 		}

@@ -5,7 +5,6 @@ const Answers = ({ answers, stepslength, totalAns }) => {
 	const currentStep = useSelector((state) => state.poll.currentStep)
 	const dispatch = useDispatch()
 	const handleOptionClick = (option) => {
-		console.log(answers.title, option.label)
 		dispatch(setAnswer(answers.title, option.label))
 		dispatch(setAnswerIndex(currentStep))
 		if (stepslength - 1 > currentStep && totalAns < stepslength)
