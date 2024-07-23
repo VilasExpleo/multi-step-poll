@@ -1,12 +1,17 @@
-# Installed node 
-npm i 
+**Install Node 
+NPM I**
 
-If version is mismach then installed 
 
-npm install force or legacy-peer-deps
+When installing npm packages, if there is a version mismatch, you can force the installation by using the --force or --legacy-peer-deps flags. Here’s how you can modify your commands:
 
-npm install --force or 
+# Install packages with force option
+npm install --force
+
+# Install packages with legacy peer dependencies option
 npm install --legacy-peer-deps
+If you encounter a version mismatch, you can use one of these commands to proceed with the installation:
+
+
 
 
 # Getting Started with Create React App
